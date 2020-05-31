@@ -1,0 +1,24 @@
+{
+  "extends": "standard",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "worker": true,
+    "jest": true
+  },
+  "plugins": [
+    "import",
+    "node",
+    "promise",
+    "standard"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-extra-semi": "error",
+    "semi": [2, "always"]
+  }
+}
