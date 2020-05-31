@@ -11,8 +11,6 @@ function initQueue (cb) {
         q._queue.splice(ndx, 1);
       }
 
-      console.log(this._queue, item, ndx);
-
       if (q._queue.length === 0) {
         cb();
       }

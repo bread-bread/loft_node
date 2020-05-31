@@ -25,7 +25,7 @@ function copy (source, target, queue) {
       if (fileStats.isDirectory()) {
         copy(filePath, target, queue);
       } else {
-        const firstLetter = item[firstLetterNdx];
+        const firstLetter = item[firstLetterNdx].toUpperCase();
         const newDirPath = path.join(target, firstLetter);
         const newFilePath = path.join(newDirPath, item);
 

@@ -3,7 +3,7 @@ const { promises: fs, existsSync } = require('fs');
 const fileUtils = require('./utils/file');
 const { ERROR_CODE } = require('./constants');
 
-const [ source, target, deleting ] = process.argv.slice(2);
+const [source, target, deleting] = process.argv.slice(2);
 const firstLetterNdx = 0;
 
 async function copy (source, target) {
@@ -11,7 +11,7 @@ async function copy (source, target) {
   const files = await readDir(sourcePath);
 
   return Promise.all(files.map(({ name, path: fPath }) => {
-    const firstLetter = name[firstLetterNdx];
+    const firstLetter = name[firstLetterNdx].toUpperCase();
     const filePath = path.resolve(fPath);
     const newDirPath = path.join(target, firstLetter);
     const newFilePath = path.join(newDirPath, name);
